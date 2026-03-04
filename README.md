@@ -10,3 +10,6 @@ Challenges ---
 - Ordenar por Columna 20 pts
 - Busqueda por nombre de serie 20 pts
 - Responsive 15 pts
+
+Total 110 pts
+
