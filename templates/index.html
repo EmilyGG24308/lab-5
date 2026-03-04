@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Series</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>My Series</h1>
+
+<form method="GET" action="/">
+    <input type="text" name="search" placeholder="Search series...">
+    <button type="submit">Search</button>
+</form>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Current</th>
+        <th>Total</th>
+	<th>Status</th>
+    </tr>
+
+    {{range .}}
+    <tr>
+        <td>{{.Name}}</td>
+        <td>{{.Current}}</td>
+        <td>{{.Total}}</td>
+	<td>
+	   <progress value="{{.Current}}" max="{{.Total}}"></progress>
+	</td>
+	<td>
+	   <td>
+    	{{if eq .Current .Total}}
+        	<span style="color:green;">Completed</span>
+    	{{else}}
+        	Watching
+    	{{end}}
+	</td>
+    </tr>
+    {{end}}
+
+</table>
+
+</body>
+</html>

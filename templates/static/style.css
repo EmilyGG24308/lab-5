@@ -1,0 +1,107 @@
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background-color: #f8fafc; /* Very soft grayish-blue */
+    color: #475569; /* Slate gray instead of black */
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: -0.5px;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: separate; /* Required for rounded corners on tables */
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 24px; /* Super rounded, no "blocky" feel */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+th {
+    background-color: #f1f5f9; /* Light header instead of dark green */
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 20px;
+    text-align: left;
+}
+
+td {
+    padding: 20px;
+    border-bottom: 1px solid #f1f5f9; /* Extremely faint divider */
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f8fafc; /* Very subtle hover */
+}
+
+/* Rounded Progress Bar */
+progress {
+    appearance: none;
+    width: 100%;
+    height: 8px; /* Thinner is more elegant */
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e2e8f0;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #10b981; /* Fresh Emerald green */
+    border-radius: 10px;
+}
+
+/* Modern Pill-Shaped Form */
+form {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+input[type="text"] {
+    padding: 12px 20px;
+    width: 280px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 99px; /* Pill shape */
+    transition: all 0.2s;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 99px; /* Pill shape */
+    background-color: #1e293b; /* Deep slate instead of bright green */
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+}
